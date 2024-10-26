@@ -1,0 +1,268 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #f5deb3;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.search-bar {
+    padding: 8px;
+    margin-right: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.hamburger-menu {
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #ffe4b5;
+    padding: 100px 20px;
+    text-align: center;
+    color: #333;
+}
+
+.hero h1 {
+    font-size: 48px;
+    font-family: 'Playfair Display', serif;
+}
+
+.hero p {
+    font-size: 20px;
+    margin: 10px 0 20px;
+}
+
+.cta-btn {
+    background-color: #ff7f50;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.cta-btn:hover {
+    background-color: #ff4500;
+}
+
+/* Featured Books */
+.featured-books {
+    padding: 60px 20px;
+    background-color: #f0f8ff;
+}
+
+.featured-books h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 32px;
+    color: #333;
+}
+
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.book-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.book-card:hover {
+    transform: scale(1.05);
+}
+
+.book-card img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.book-card h3 {
+    margin: 10px 0 5px;
+    font-size: 20px;
+}
+
+.book-card p {
+    color: #666;
+}
+
+.book-card button {
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #ff7f50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.book-card button:hover {
+    background-color: #ff4500;
+}
+
+/* Categories */
+.categories {
+    padding: 60px 20px;
+    background-color: #f0fff0;
+}
+
+.category-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.category-card {
+    background-color: #87cefa;
+    color: white;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.category-card:hover {
+    background-color: #00bfff;
+}
+
+/* Reviews */
+.reviews {
+    padding: 60px 20px;
+    background-color: #f5deb3;
+    text-align: center;
+}
+
+.review-carousel {
+    display: flex;
+    overflow-x: scroll;
+    padding: 20px;
+    gap: 20px;
+}
+
+.review-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-width: 250px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 40px 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-content ul {
+    list-style: none;
+}
+
+.footer-content ul li {
+    margin-bottom: 10px;
+}
+
+.footer-content ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-content .social-media a {
+    margin-right: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.newsletter input {
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.newsletter button {
+    padding: 8px 12px;
+    background-color: #ff7f50;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: block;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .book-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .category-grid {
+        flex-direction: column;
+    }
+
+    .review-carousel {
+        flex-direction: column;
+    }
+}
